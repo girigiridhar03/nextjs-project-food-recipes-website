@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import Link from "next/link";
 
 const singleRecipe = async(currentId) =>{
@@ -20,7 +21,7 @@ const recipeDetails = async ({params}) => {
        {
         <div className="flex gap-8 lg:gap-5 xl:gap-10 flex-col lg:flex-row">
             <div className="w-[100%] lg:w-[500px] h-[300px] md:h-[500px] overflow-hidden rounded-lg">
-                <img className="w-[100%] h-[100%] object-cover" src={singleRecipeDetails?.image} alt={singleRecipeDetails?.name} />
+                <Image width={'500'} height={'500'}  className="w-[100%] h-[100%] object-cover" src={singleRecipeDetails?.image} alt={singleRecipeDetails?.name} />
             </div>
             <div className=" flex flex-col gap-4">
                  <div className=" text-2xl md:text-4xl font-bold">

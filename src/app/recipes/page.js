@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 
@@ -30,7 +31,7 @@ const recipes = async() => {
                     <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
                           <div  className="bg-[rgb(245,246,247)]  flex flex-col  gap-4 p-5 rounded-lg overflow-hidden shadow-md">
                           <div className="w-[100%] h-[350px] mx-auto overflow-hidden round">
-                            <img className="w-[100%] h-[100%] object-cover" src={recipe.image} alt={recipe.name} />
+                            <Image width={500} height={500} className="w-[100%] h-[100%] object-cover" src={recipe.image} alt={recipe.name} />
                           </div>
                           <div className="font-bold text-2xl text-slate-500">
                              {recipe.name}
