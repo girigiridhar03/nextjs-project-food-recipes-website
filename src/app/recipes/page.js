@@ -27,8 +27,8 @@ const recipes = async() => {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 sm:gap-8 md:gap-3 lg:gap-5 xl:gap-8 my-5 space-y-5 md:space-y-0">
              {recipes && recipes.length > 0 ? 
                   recipes?.map(recipe=>(
-                    <Link href={`/recipes/${recipe.id}`}>
-                          <div key={recipe.id} className="bg-[rgb(245,246,247)]  flex flex-col  gap-4 p-5 rounded-lg overflow-hidden shadow-md">
+                    <Link key={recipe.id} href={`/recipes/${recipe.id}`}>
+                          <div  className="bg-[rgb(245,246,247)]  flex flex-col  gap-4 p-5 rounded-lg overflow-hidden shadow-md">
                           <div className="w-[100%] h-[350px] mx-auto overflow-hidden round">
                             <img className="w-[100%] h-[100%] object-cover" src={recipe.image} alt={recipe.name} />
                           </div>
